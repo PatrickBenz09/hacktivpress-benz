@@ -5,7 +5,14 @@ const http = axios.create({
 })
 
 const actions = {
-
+  getAllArticles ({ commit }) {
+    http.get('/articles')
+    .then(({ data }) => {
+      // console.log("masuk actions")
+      commit('setArticles', data)
+    })
+    .catch((err) => console.log(err))
+  }
 }
 
 export default actions

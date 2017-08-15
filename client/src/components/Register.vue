@@ -14,16 +14,6 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s6">
-            <input v-model="register.name" id="name" type="text" class="validate" required>
-            <label for="first_name">Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input v-model="register.email" id="email" type="email" class="validate" required>
-            <label for="email">E-Mail</label>
-          </div>
-        </div>
-        <div class="row">
           <button @click="registerUser" class="btn waves-effect waves-light" type="button" name="action">Submit
             <i class="material-icons right">send</i>
           </button>
@@ -39,9 +29,7 @@ export default {
     return {
       register: {
         username: '',
-        password: '',
-        name: '',
-        email: ''
+        password: ''
       }
     }
   },

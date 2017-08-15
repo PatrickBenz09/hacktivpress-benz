@@ -1,0 +1,30 @@
+{
+  "name": "hacktivpress-benz",
+  "version": "1.0.0",
+  "description": "Simple Blog App for phase 2 live-code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickBenz09/hacktivpress-benz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrickBenz09/hacktivpress-benz/issues"
+  },
+  "homepage": "https://github.com/PatrickBenz09/hacktivpress-benz#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-generator": "^4.15.0",
+    "jsonwebtoken": "^7.4.2",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7"
+  }
+}

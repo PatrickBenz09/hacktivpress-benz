@@ -13,8 +13,6 @@ let register = (req, res) => {
   User.create({
     username: req.body.username,
     password: bcrypt.hashSync(req.body.password, salt),
-    name: req.body.name,
-    email: req.body.email,
     salt: salt
   })
   .then(resp => res.send(resp))
@@ -27,9 +25,7 @@ let login = (req, res) => {
     if(bcrypt.compareSync(req.body.password, resp.password)) {
       const token = jwt.sign({
         id: resp._id,
-        username: resp.username,
-        name: resp.name,
-        email: resp.email
+        username: resp.username
       }, process.env.SECRET);
       req.headers.token = token;
       req.headers.id = resp._id;

@@ -7,7 +7,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    articles: []
+    articles: [],
+    user: false,
+    id: false,
+    token: false
   },
   mutations,
   actions

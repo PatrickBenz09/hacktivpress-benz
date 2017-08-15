@@ -9,10 +9,10 @@
             <p>{{ article.category }}</p>
           </div>
           <div class="card-action">
-            <!-- <router-link
+            <router-link
             :id="article._id"
             :to="{ path: '/article' + '/' + article._id }"
-            >Read More ></router-link> -->
+            >Read More ></router-link>
           </div>
         </div>
       </div>

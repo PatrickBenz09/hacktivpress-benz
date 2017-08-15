@@ -22,14 +22,28 @@
 
 <script>
 export default {
-  computed: {
-    id () {
-      
+  props: ['id'],
+  data () {
+    return {
+      article: ''
     }
-  }
+  },
+  watch: {
+    '$route': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      let self = this
+      self.$http.get(`http://localhost:3000/articles/${self.id}`)
+      .then(resp => {
+        console.log(resp.data)
+        self.article = resp.data
+      })
+      .catch(err => console.log(err))
+    }
+  },
   mounted () {
-    let self = this
-    self.get(`http://localhost:3000/articles/${ self.id }`)
+    this.fetchData()
   }
 }
 </script>

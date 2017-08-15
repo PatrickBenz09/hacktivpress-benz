@@ -19,7 +19,7 @@ let routes = [
     component: Home,
     children: [
       { path: '/', component: SumArticle },
-      { path: '/article/:id', component: DetailArticle }
+      { path: '/article/:id', props: true, component: DetailArticle }
     ]
   }
 ]

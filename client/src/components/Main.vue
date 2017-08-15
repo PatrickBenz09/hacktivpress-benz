@@ -36,7 +36,7 @@
 export default {
   data () {
     return {
-      user: false,
+      user: this.$store.state.user,
       articleForm: {
         title: '',
         content: '',
@@ -46,7 +46,13 @@ export default {
   },
   methods: {
     addArticle () {
-      //
+      let self = this
+      self.$http.post('http://localhost:3000/articles', self.articleForm, {
+        headers: {
+          id: self.$store.state.id,
+          token: self.$store.state.token
+        }
+      })
     }
   }
 }
